@@ -1,6 +1,7 @@
 const illo = new Zdog.Illustration({
     // set canvas with selector
     element: '.zdog-canvas-1',
+   
   });
   
   // add circle
@@ -107,6 +108,11 @@ const illo3 = new Zdog.Illustration({
       const illo5= new Zdog.Illustration({
         // set canvas with selector
         element: '.zdog-canvas-5',
+        dragRotate: true,
+        // stop rotation when dragging starts
+        onDragStart: function() {
+          isSpinning = false;
+        },
         });
         
         // add circle
